@@ -7,10 +7,12 @@ public class Main {
         // Korrekte Aufrufe
         CarBooking booking1 = new CarBooking(LocalDate.of(2023, 5, 5), LocalDate.of(2023, 5, 10), 800);
         int actualKilometers1 = booking1.bookCar(); // Rückgabe: eine tatsächliche Kilometerzahl größer als 800
+        System.out.println("actualKilometers1: " + actualKilometers1);
 
         CarBooking booking2 = new CarBooking(LocalDate.of(2023, 5, 5), LocalDate.of(2023, 5, 6), 300);
         try {
             int actualKilometers2 = booking2.bookCar(); // Rückgabe: eine tatsächliche Kilometerzahl größer als 300
+            System.out.println("actualKilometers2: " + actualKilometers2);
         } catch (Exception e) {
             System.out.println("Exception: " + e.getMessage());
         }
